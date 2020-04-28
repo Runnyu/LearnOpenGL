@@ -125,6 +125,7 @@
     <ClCompile Include="color.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="materials.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h" />
