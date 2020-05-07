@@ -30,6 +30,9 @@
     <ClCompile Include="materials.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="lighting_maps.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h">

@@ -124,6 +124,7 @@
     <ClCompile Include="base_lighting.cpp" />
     <ClCompile Include="color.cpp" />
     <ClCompile Include="glad.c" />
+    <ClCompile Include="lighting_maps.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="materials.cpp" />
   </ItemGroup>
