@@ -8,7 +8,6 @@
 #include "shader_s.h"
 #include "camera.h"
 
-#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
 #include <iostream>
@@ -36,7 +35,7 @@ static float lastFrame = 0.0f;
 // lighting
 static glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 
-int gl_test_lighting_maps()
+int gl_test_directional_light()
 {
 	// glfw: initialize and configure
 	// ------------------------------
@@ -80,7 +79,7 @@ int gl_test_lighting_maps()
 
 	// build and compile our shader zprogram
 	// ------------------------------------
-	Shader lightingShader("shader/4_lighting_maps.vs", "shader/4_lighting_maps.fs");
+	Shader lightingShader("shader/5_directional_light.vs", "shader/5_directional_light.fs");
 	Shader lampShader("shader/4_lamp.vs", "shader/4_lamp.fs");
 
 	// set up vertex data (and buffer(s)) and configure vertex attributes
@@ -130,6 +129,19 @@ int gl_test_lighting_maps()
 		-0.5f,  0.5f, -0.5f,  0.0f,  1.0f,  0.0f,  0.0f, 1.0f
 	};
 
+	glm::vec3 cubePositions[] = {
+		glm::vec3(0.0f,  0.0f,  0.0f),
+		glm::vec3(2.0f,  5.0f, -15.0f),
+		glm::vec3(-1.5f, -2.2f, -2.5f),
+		glm::vec3(-3.8f, -2.0f, -12.3f),
+		glm::vec3(2.4f, -0.4f, -3.5f),
+		glm::vec3(-1.7f,  3.0f, -7.5f),
+		glm::vec3(1.3f, -2.0f, -2.5f),
+		glm::vec3(1.5f,  2.0f, -2.5f),
+		glm::vec3(1.5f,  0.2f, -1.5f),
+		glm::vec3(-1.3f,  1.0f, -1.5f)
+	};
+
 	// first, configure the cube's VAO (and VBO)
 	unsigned int VBO, cubeVAO;
 	glGenVertexArrays(1, &cubeVAO);
@@ -163,7 +175,10 @@ int gl_test_lighting_maps()
 
 	unsigned int diffuseMap = loadTexture("textures/container2.png");
 	unsigned int specularMap = loadTexture("textures/container2_specular.png");
-	unsigned int emissionMap = loadTexture("textures/matrix.jpg");
+
+	lightingShader.use();
+	lightingShader.setInt("material.diffuse", 0);
+	lightingShader.setInt("material.specular", 1);
 
 	// render loop
 	// -----------
@@ -190,9 +205,6 @@ int gl_test_lighting_maps()
 		glActiveTexture(GL_TEXTURE1);
 		glBindTexture(GL_TEXTURE_2D, specularMap);
 
-		glActiveTexture(GL_TEXTURE2);
-		glBindTexture(GL_TEXTURE_2D, emissionMap);
-
 		// be sure to activate shader when setting uniforms/drawing objects
 		lightingShader.use();
 		lightingShader.setVec3("lightPos", lightPos);
@@ -205,36 +217,26 @@ int gl_test_lighting_maps()
 		lightingShader.setMat4("view", view);
 
 		// material
-		lightingShader.setInt("material.diffuse", 0);
-		lightingShader.setInt("material.specular", 1);
-		lightingShader.setInt("material.emission", 2);
-		lightingShader.setFloat("material.shininess", 64.0f);
+		lightingShader.setFloat("material.shininess", 32.0f);
 
 		// light
+		lightingShader.setVec3("light.direction", -0.2f, -1.0f, -0.3f);
 		lightingShader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
 		lightingShader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f);
 		lightingShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
 
-		// world transformation
-		glm::mat4 model = glm::mat4(1.0f);
-		lightingShader.setMat4("model", model);
-
 		// render the cube
 		glBindVertexArray(cubeVAO);
-		glDrawArrays(GL_TRIANGLES, 0, 36);
+		for (unsigned int i = 0; i < 10; i++)
+		{
+			glm::mat4 model = glm::mat4(1.0f);
+			model = glm::translate(model, cubePositions[i]);
+			float angle = 20.0f * i;
+			model = glm::rotate(model, glm::radians(angle), glm::vec3(1.0f, 0.3f, 0.5f));
+			lightingShader.setMat4("model", model);
 
-		// also draw the lamp object
-		lampShader.use();
-		lampShader.setMat4("projection", projection);
-		lampShader.setMat4("view", view);
-		model = glm::mat4(1.0f);
-		model = glm::translate(model, lightPos);
-		model = glm::scale(model, glm::vec3(0.2f)); // a smaller cube
-		lampShader.setMat4("model", model);
-
-		glBindVertexArray(lightVAO);
-		glDrawArrays(GL_TRIANGLES, 0, 36);
-
+			glDrawArrays(GL_TRIANGLES, 0, 36);
+		}
 
 		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
 		// -------------------------------------------------------------------------------

@@ -125,8 +125,11 @@
     <ClCompile Include="color.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="lighting_maps.cpp" />
+    <ClCompile Include="directional_light.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="materials.cpp" />
+    <ClCompile Include="point_light.cpp" />
+    <ClCompile Include="spotlight.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h" />
