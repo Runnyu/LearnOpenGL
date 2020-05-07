@@ -128,6 +128,7 @@
     <ClCompile Include="directional_light.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="materials.cpp" />
+    <ClCompile Include="mul_lights.cpp" />
     <ClCompile Include="point_light.cpp" />
     <ClCompile Include="spotlight.cpp" />
   </ItemGroup>

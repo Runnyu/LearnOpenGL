@@ -8,5 +8,6 @@ int gl_test_lighting_maps();
 int gl_test_directional_light();
 int gl_test_point_light();
 int gl_test_spotlight();
+int gl_test_mul_lights();
 
 #endif
