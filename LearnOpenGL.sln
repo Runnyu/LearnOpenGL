@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lighting", "Lighting\Lighti
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Model", "Model\Model.vcxproj", "{0D2D66A3-220E-4E52-9BB5-B55550C09F8C}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Advance", "Advance\Advance.vcxproj", "{B943C5F7-AA15-4AEF-8674-44081F7FC8B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{0D2D66A3-220E-4E52-9BB5-B55550C09F8C}.Release|x64.Build.0 = Release|x64
 		{0D2D66A3-220E-4E52-9BB5-B55550C09F8C}.Release|x86.ActiveCfg = Release|Win32
 		{0D2D66A3-220E-4E52-9BB5-B55550C09F8C}.Release|x86.Build.0 = Release|Win32
+		{B943C5F7-AA15-4AEF-8674-44081F7FC8B9}.Debug|x64.ActiveCfg = Debug|x64
+		{B943C5F7-AA15-4AEF-8674-44081F7FC8B9}.Debug|x64.Build.0 = Debug|x64
+		{B943C5F7-AA15-4AEF-8674-44081F7FC8B9}.Debug|x86.ActiveCfg = Debug|Win32
+		{B943C5F7-AA15-4AEF-8674-44081F7FC8B9}.Debug|x86.Build.0 = Debug|Win32
+		{B943C5F7-AA15-4AEF-8674-44081F7FC8B9}.Release|x64.ActiveCfg = Release|x64
+		{B943C5F7-AA15-4AEF-8674-44081F7FC8B9}.Release|x64.Build.0 = Release|x64
+		{B943C5F7-AA15-4AEF-8674-44081F7FC8B9}.Release|x86.ActiveCfg = Release|Win32
+		{B943C5F7-AA15-4AEF-8674-44081F7FC8B9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
