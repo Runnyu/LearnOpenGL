@@ -3,5 +3,6 @@
 
 void depth_testing();
 void stencil_testing();
+void blending();
 
 #endif

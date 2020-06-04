@@ -3,5 +3,6 @@
 int main()
 {
 	// depth_testing();
-	stencil_testing();
+	// stencil_testing();
+	blending();
 }
