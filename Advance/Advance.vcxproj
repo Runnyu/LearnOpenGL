@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="blending.cpp" />
     <ClCompile Include="depth_testing.cpp" />
+    <ClCompile Include="face_culling.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stencil_testing.cpp" />

@@ -4,5 +4,6 @@ int main()
 {
 	// depth_testing();
 	// stencil_testing();
-	blending();
+	// blending();
+	face_culling();
 }

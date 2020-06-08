@@ -4,5 +4,6 @@
 void depth_testing();
 void stencil_testing();
 void blending();
+void face_culling();
 
 #endif
