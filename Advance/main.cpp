@@ -5,5 +5,6 @@ int main()
 	// depth_testing();
 	// stencil_testing();
 	// blending();
-	face_culling();
+	// face_culling();
+	framebuffers();
 }
