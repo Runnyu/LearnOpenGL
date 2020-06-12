@@ -6,5 +6,6 @@ int main()
 	// stencil_testing();
 	// blending();
 	// face_culling();
-	framebuffers();
+	// framebuffers();
+	cubemaps();
 }

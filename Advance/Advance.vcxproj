@@ -122,6 +122,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="blending.cpp" />
+    <ClCompile Include="cubemaps.cpp" />
     <ClCompile Include="depth_testing.cpp" />
     <ClCompile Include="face_culling.cpp" />
     <ClCompile Include="framebuffers.cpp" />

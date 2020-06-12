@@ -6,5 +6,6 @@ void stencil_testing();
 void blending();
 void face_culling();
 void framebuffers();
+void cubemaps();
 
 #endif
