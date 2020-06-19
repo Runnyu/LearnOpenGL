@@ -7,5 +7,6 @@ void blending();
 void face_culling();
 void framebuffers();
 void cubemaps();
+void advanced_glsl();
 
 #endif

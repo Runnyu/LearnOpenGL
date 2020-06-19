@@ -7,5 +7,6 @@ int main()
 	// blending();
 	// face_culling();
 	// framebuffers();
-	cubemaps();
+	// cubemaps();
+	advanced_glsl();
 }
