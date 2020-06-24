@@ -127,6 +127,7 @@
     <ClCompile Include="depth_testing.cpp" />
     <ClCompile Include="face_culling.cpp" />
     <ClCompile Include="framebuffers.cpp" />
+    <ClCompile Include="geometry_shader.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stencil_testing.cpp" />
@@ -137,6 +138,7 @@
     <ClInclude Include="mesh.h" />
     <ClInclude Include="model.h" />
     <ClInclude Include="shader_s.h" />
+    <ClInclude Include="shader_ss.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

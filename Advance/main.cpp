@@ -8,5 +8,6 @@ int main()
 	// face_culling();
 	// framebuffers();
 	// cubemaps();
-	advanced_glsl();
+	// advanced_glsl();
+	geometry_shader();
 }

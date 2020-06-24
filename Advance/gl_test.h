@@ -8,5 +8,6 @@ void face_culling();
 void framebuffers();
 void cubemaps();
 void advanced_glsl();
+void geometry_shader();
 
 #endif

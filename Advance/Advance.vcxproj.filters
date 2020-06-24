@@ -42,6 +42,9 @@
     <ClCompile Include="advanced_glsl.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="geometry_shader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h">
@@ -60,6 +63,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="gl_test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="shader_ss.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
