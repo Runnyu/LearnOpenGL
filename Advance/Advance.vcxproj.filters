@@ -45,6 +45,9 @@
     <ClCompile Include="geometry_shader.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="intancing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h">

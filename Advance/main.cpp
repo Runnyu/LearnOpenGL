@@ -9,5 +9,6 @@ int main()
 	// framebuffers();
 	// cubemaps();
 	// advanced_glsl();
-	geometry_shader();
+	// geometry_shader();
+	intancing();
 }

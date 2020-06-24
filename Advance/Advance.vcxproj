@@ -129,6 +129,7 @@
     <ClCompile Include="framebuffers.cpp" />
     <ClCompile Include="geometry_shader.cpp" />
     <ClCompile Include="glad.c" />
+    <ClCompile Include="intancing.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stencil_testing.cpp" />
   </ItemGroup>
