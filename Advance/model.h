@@ -17,11 +17,11 @@ public:
 		loadModel(path);
 	}
 	void Draw(Shader shader);
-private:
 	/*  模型数据  */
 	vector<Mesh> meshes;
-	string directory;
 	vector<Texture> textures_loaded;
+private:
+	string directory;
 	/*  函数   */
 	void loadModel(string path);
 	void processNode(aiNode *node, const aiScene *scene);

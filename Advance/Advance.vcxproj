@@ -122,6 +122,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="advanced_glsl.cpp" />
+    <ClCompile Include="belt.cpp" />
     <ClCompile Include="blending.cpp" />
     <ClCompile Include="cubemaps.cpp" />
     <ClCompile Include="depth_testing.cpp" />
@@ -131,6 +132,8 @@
     <ClCompile Include="glad.c" />
     <ClCompile Include="intancing.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mesh.cpp" />
+    <ClCompile Include="model.cpp" />
     <ClCompile Include="stencil_testing.cpp" />
   </ItemGroup>
   <ItemGroup>

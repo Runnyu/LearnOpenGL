@@ -10,5 +10,6 @@ int main()
 	// cubemaps();
 	// advanced_glsl();
 	// geometry_shader();
-	intancing();
+	// intancing();
+	belt();
 }

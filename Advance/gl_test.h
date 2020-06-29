@@ -10,5 +10,6 @@ void cubemaps();
 void advanced_glsl();
 void geometry_shader();
 void intancing();
+void belt();
 
 #endif
