@@ -11,5 +11,7 @@ int main()
 	// advanced_glsl();
 	// geometry_shader();
 	// intancing();
-	belt();
+	// belt();
+	// anti_aliasing();
+	blinn_phong();
 }

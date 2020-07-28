@@ -57,6 +57,12 @@
     <ClCompile Include="mesh.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="anti_aliasing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="blinn_phong.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h">
